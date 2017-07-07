@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import {AppRegistry, View, Text , ListView, StyleSheet} from 'react-native'
 
-export default  class StartingProject extends Component {
+export default  class FifthScreen extends Component {
      constructor(){
         super();
         const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
         this.state = {
             userdataSource: ds,
     };
+}
+componentDidMount() {
+    this.fetchUser();
 }
 fetchUser(){
     fetch('https://jsonplaceholder.typicode.com/todos')
@@ -29,7 +32,8 @@ renderRow(user , sectionId, rowId , hightlightRow){
         return (
           <ListView
           dataSource={this.state.userdataSource}
-          renderRow={this.renderRow.bind(this)}/>
+          renderRow={this.renderRow.bind(this)}
+          />
         );
     }
 }

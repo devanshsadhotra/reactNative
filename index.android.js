@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {AppRegistry, View, Text} from 'react-native'
 import FifthScreen from './App/Components/FifthScreen';
-export default  class StartingProject extends Component {
+export default  class StartProject extends Component {
     render() {
         return (
            <View>
@@ -10,4 +10,4 @@ export default  class StartingProject extends Component {
         );
     }
 }
-AppRegistry.registerComponent('StartingProject', ()=>StartingProject);
+AppRegistry.registerComponent('StartProject', ()=>StartProject);
