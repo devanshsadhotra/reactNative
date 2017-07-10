@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import { AppRegistry, View, Text, StyleSheet } from "react-native";
+import React, { Component } from 'react';
+import { AppRegistry, View, Text, StyleSheet } from 'react-native';
 
 export default class SecondScreen extends Component {
   render() {
     return (
-      <View style={{ flexDirection: "row" }}>
+      <View style={{ flexDirection: 'row' }}>
         <View>
           <Text style={styles.textColor}> Hello Brad</Text>
         </View>
@@ -24,15 +24,14 @@ export default class SecondScreen extends Component {
 }
 const styles = StyleSheet.create({
   textColor: {
-    color: "blue"
+    color: 'blue'
   },
   container1: {
-    flexDirection: "row",
+    flexDirection: 'row',
     height: 100,
-    backgroundColor: "black"
+    backgroundColor: 'black'
   },
   container2: {
-    flexDirection: "row"
+    flexDirection: 'row'
   }
 });
-AppRegistry.registerComponent("SecondScreen", () => SecondScreen);

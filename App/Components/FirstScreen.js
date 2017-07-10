@@ -1,30 +1,30 @@
-import React, { Component } from "react";
-import { AppRegistry, Text, View, StyleSheet, Button } from "react-native";
-import { StackNavigator } from "react-navigation";
-import SecondScreen from "./SecondScreen";
+import React, { Component } from 'react';
+import { AppRegistry, Text, View, StyleSheet, Button } from 'react-native';
+import { StackNavigator } from 'react-navigation';
+import SecondScreen from './SecondScreen';
 
 export default class FirstScreen extends Component {
   static navigationOptions = {
-    title: "First"
+    title: 'First'
   };
   constructor(props) {
     super(props);
     this.state = {
-      name: "Devansh",
+      name: 'Devansh',
       showName: true,
       message: this.props.message
     };
     this.onPressButton = this.onPressButton.bind(this);
   }
   static defaultProps = {
-    message: "Hi There"
+    message: 'Hi There'
   };
   onPressButton() {
     const { navigate } = this.props.navigation;
-    navigate("Second");
+    navigate('Second');
   }
   render() {
-    let name = this.state.showName ? this.state.name : "No name";
+    let name = this.state.showName ? this.state.name : 'No name';
     return (
       <View>
         <Text>
@@ -38,12 +38,3 @@ export default class FirstScreen extends Component {
     );
   }
 }
-const ModalStack = StackNavigator({
-  Home: { screen: FirstScreen },
-  Second: {
-    path: "./SecondScreen",
-    screen: SecondScreen
-  }
-});
-
-AppRegistry.registerComponent("FirstScreen", () => ModalStack);
